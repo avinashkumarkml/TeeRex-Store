@@ -1,0 +1,25 @@
+.card{
+    border:1px solid red;
+    width:200px;
+    height: 200px;
+}
+.top{
+    border:1px solid red;
+    position: relative;
+    padding: 8px;
+}
+.top>img{
+    width:100%
+}
+.name{
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    color: white;
+
+
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+}
