@@ -1,0 +1,13 @@
+.container {
+  height: 8vh;
+  width: 100vw;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+.cart{
+  margin: 15px;
+}
+

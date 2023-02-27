@@ -1,8 +1,8 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
-import ProductListingPage from "./component/ProductListingPage";
-import PreCheckoutPage from "./component/PreCheckoutPage";
-import Navbar from "./component/Navbar";
+import ProductListingPage from "./component/ProductListingPage/ProductListingPage";
+import PreCheckoutPage from "./component/PreCheckoutPage/PreCheckoutPage";
+import Navbar from "./component/Navbar/Navbar";
 
 const Layout = () => {
   return (

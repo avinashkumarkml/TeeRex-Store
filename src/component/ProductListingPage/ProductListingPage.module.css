@@ -1,0 +1,25 @@
+.container{
+    height: 100vh;
+    display:flex;
+}
+.sidebar{
+    flex:3;
+
+}
+.cardLists{
+    flex: 7;
+    padding: 20px;
+    display: flex;
+    /* justify-content:space-around; */
+    row-gap: 40px;
+    column-gap: 30px;
+    flex-wrap: wrap;
+
+   
+}
+@media only screen and (min-width: 0px) and (max-width: 650px) {
+    .sidebar{
+        display: none;
+    }
+    
+}

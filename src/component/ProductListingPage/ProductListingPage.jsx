@@ -1,7 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import styles from "./ProductListingPage.module.css";
-import Card from "./Card/Card";
+import Card from "../Card/Card";
+import Sidebar from "../Sidebar/Sidebar";
 const ProductListingPage = () => {
   const [userData, setUserData] = useState([]);
 
@@ -22,18 +23,16 @@ const ProductListingPage = () => {
     fetchUsers();
   }, []);
 
-  console.log(userData);
 
   return (
     <div className={styles.container}>
-      <div className={styles.sidebar}> sidebar</div>
+      <div className={styles.sidebar}> 
+      <Sidebar/>
+      </div>
       <div className={styles.cardLists}>
-        {userData.map((data,index)=>{
-          return (
-            <Card key={index} />
-          )
+        {userData.map((data, index) => {
+          return <Card data={data} key={index} />;
         })}
-        
       </div>
     </div>
   );
