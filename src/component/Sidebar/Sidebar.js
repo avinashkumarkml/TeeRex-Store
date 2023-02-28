@@ -35,6 +35,18 @@ const Sidebar = () => {
         <input type="checkbox" id="450" />
         <label htmlFor="450">Rs450</label>
       </div>
+
+      <div className={styles.price}>
+        <h5>Type</h5>
+        <input type="checkbox" id="0-250" />
+        <label htmlFor="0-250">Polo</label>
+        <br />
+        <input type="checkbox" id="251-450" />
+        <label htmlFor="251-450">Hoodie</label>
+        <br />
+        <input type="checkbox" id="450" />
+        <label htmlFor="450">Basic</label>
+      </div>
     </div>
   );
 };
