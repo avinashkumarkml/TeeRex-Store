@@ -3,9 +3,25 @@ import { useEffect, useState } from "react";
 import styles from "./ProductListingPage.module.css";
 import Card from "../Card/Card";
 import Sidebar from "../Sidebar/Sidebar";
+import { useDispatch, useSelector } from "react-redux";
 const ProductListingPage = () => {
   const [userData, setUserData] = useState([]);
+  const [filterData, setFilterData]=useState([]);
+  const {color, gender, price, type} = useSelector((store) => store);
 
+  console.log(userData)
+  const filterUserData=()=>{
+    
+    let filteredData= userData.filter(user=>color?.includes(user?.color?.toLowerCase()))
+    setFilterData(filteredData)
+   }
+   
+
+  useEffect(()=>{
+    filterUserData()
+  },[color, filterData])
+
+  
   const fetchUsers = async () => {
     try {
       let users = await fetch(
@@ -30,9 +46,13 @@ const ProductListingPage = () => {
       <Sidebar/>
       </div>
       <div className={styles.cardLists}>
-        {userData.map((data, index) => {
+        {filterData.length !== 0 ?  filterData.map((data, index) => {
           return <Card data={data} key={index} />;
-        })}
+        }) :
+        userData.map((data, index) => {
+          return <Card data={data} key={index} />;
+        })
+      }
       </div>
     </div>
   );

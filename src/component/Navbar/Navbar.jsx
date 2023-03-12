@@ -8,13 +8,14 @@ const Navbar = () => {
       <div className={styles.left}>TeeRax Store</div>
       <div className={styles.right}>
         <Link to="/">
-      <span>Products</span>
+          <span>Products</span>
         </Link>
         <Link to="/">
-      <span className={styles.cart}><i class="fa-solid fa-cart-shopping"></i></span>
+          <span className={styles.cart}>
+            <i className="fa-solid fa-cart-shopping"></i>
+          </span>
         </Link>
       </div>
-        
     </div>
   );
 };
